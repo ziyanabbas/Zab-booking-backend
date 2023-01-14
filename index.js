@@ -50,6 +50,12 @@ mongoose.connection.on("connected",()=>{
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 // });
+// const client = new MongoClient(process.env.MONGODB, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 app.listen(PORT, ()=>{
     connect()
     console.log(`Server is running on http://localhost:${PORT}`);
